@@ -95,7 +95,7 @@ function redondearDec(num, decimales){
   const result = arrCad.slice(0, posicionDecimal + (decimales + 1));//Copio en un  nuevo array desde la posición cero hasta dos decimales después del punto
 
   let resultadoFinal = parseFloat(result.join(""));//convierto de nuevo el array a string y a su vez a float
-  //resultadoFinal = Math.floor(resultadoFinal); si uso este método me elimina los decimales
+  //ResultadoFinal = Math.floor(resultadoFinal); si uso este método me elimina los decimales
   return resultadoFinal;
 }
 
