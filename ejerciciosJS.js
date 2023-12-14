@@ -15,7 +15,7 @@ for (let i=0; i<arrNames.length; i++){
     }
 }*/
 
-const newArr = arrNames.filter(name => name.id == 3);
+const newArr = arrNames.filter(name => name.id === 3);
 console.log("Resultado ejercicio 1", newArr);
 
 //Ejercicio 2
@@ -24,7 +24,7 @@ console.log("Resultado ejercicio 1", newArr);
 const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test'];
 const arrTruthy = [];//Declaro un nuevo array
 
-for (let i=0; i<arrDirty.length; i++){
+for ( let i=0; i<arrDirty.length; i++ ){
     if (typeof arrDirty[i] === 'string' && arrDirty[i] != "" || typeof arrDirty[i] === 'number' && arrDirty[i] >= 0){//Compruebo que son tipo string y no vacíos
         arrTruthy.push(arrDirty[i]); //Los introduzco en mi nuevo array
     }
@@ -45,7 +45,7 @@ const arrCities = [
   ];
 
   const noCap = arrCities.filter(capital => capital.capital === false);//filtro los objetos que cumplen la condición
-  const nameCity = noCap.map(city => city.city);//Solo muestro la ciudad de los objetos obetnidos anteriormente
+  const nameCity = noCap.map(city => city.city);//Solo muestro el nombre de la ciudad de los objetos obtenidos anteriormente
   console.log("Resultado ejercicio 3", nameCity);
   
 
@@ -229,7 +229,7 @@ function lowerKeys(obj){
 
   for (let propiedad in obj){//Recorro el objeto pasado por parámetro
     propLower = propiedad.toLowerCase();//Convierto a minúsculas las propiedades
-    resultLowerCase[propLower] = obj[propiedad];//Asigno al nuevo objeto las propiedades en minúsculas y loas valores ya dados originalmente
+    resultLowerCase[propLower] = obj[propiedad];//Asigno al nuevo objeto las propiedades en minúsculas y los valores ya dados originalmente
   }
 
   return resultLowerCase;
